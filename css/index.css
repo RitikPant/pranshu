@@ -1,9 +1,23 @@
 body {
+  margin: 0;
+}
+
+/* Setting padding for body to accommodate the fixed header */
+body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 20px;
+  padding-top: 20px;
+  /* Adjust as needed */
   background-color: #f4f4f4;
   color: #333;
-  font-size: 16px;
+}
+
+.main-container {
+  max-width: 600px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  /* Hide horizontal overflow */
+  background-color: #fff;
+  position: relative;
 }
 
 h2 {
@@ -11,6 +25,48 @@ h2 {
   text-align: center;
   padding-bottom: 10px;
   border-bottom: 2px solid #ccc;
+}
+
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-wrapper {
+  display: flex;
+  width: fit-content;
+  transition: transform 0.5s ease; /* Add smooth transition effect */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  right: 3%;
+  transform: translateY(-50%);
+  background-color: rgba(130, 127, 127, 0.5);
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 1; /* Ensure the button stays above the images */
+  display: flex;
+  align-items: center;
+}
+
+.scroll-arrow {
+  margin-left: 5px;
+}
+
+.scroll-button:hover {
+  background-color: rgba(83, 81, 81, 0.5);
 }
 
 table {
@@ -47,13 +103,19 @@ tr:hover {
     box-shadow: none;
     overflow-x: auto;
   }
+
+  /* Adjusting the width of the table to fit its container */
+  table {
+    width: 100%;
+  }
 }
 
 /* Image Container Styles */
 .image-container {
   overflow-x: auto;
   white-space: nowrap;
-  margin-top: 20px;
+  margin-top: 5px;
+  padding: 10px;
 }
 
 .image-container img {

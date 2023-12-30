@@ -11,111 +11,134 @@
 
 <body>
 
-  <h2>Marriage Bio Data</h2>
+  <div class="main-container">
 
-  <div class="image-container">
-    <img src="assets/pp1.jpg" alt="Image 1">
-    <img src="assets/pp2.jpg" alt="Image 2">
-    <img src="assets/pp4.jpg" alt="Image 4">
-    <img src="assets/pp5.jpg" alt="Image 5">
+    <h2>Bio Data</h2>
+
+    <div class="image-container">
+      <div class="image-wrapper" id="imageWrapper">
+        <img src="assets/pp1.jpg" alt="Image 1">
+        <img src="assets/pp2.jpg" alt="Image 2">
+        <img src="assets/pp3.jpg" alt="Image 3">
+        <img src="assets/pp4.jpg" alt="Image 4">
+      </div>
+      <button class="scroll-button" onclick="scrollImages()">
+        <span class="scroll-arrow"><b>>></b></span>
+      </button>
+
+    </div>
+
+    <table>
+      <tr>
+        <th colspan="2">Personal Information</th>
+      </tr>
+      <tr>
+        <td>Name:</td>
+        <td>Pranshu Pant</td>
+      </tr>
+      <tr>
+        <td>Date of Birth:</td>
+        <td>29 October, 1997</td>
+      </tr>
+      <tr>
+        <td>Gender:</td>
+        <td>Male</td>
+      </tr>
+      <tr>
+        <td>Height:</td>
+        <td>5'5"</td>
+      </tr>
+      <tr>
+        <td>Religion:</td>
+        <td>Hindu</td>
+      </tr>
+      <tr>
+        <td>Caste:</td>
+        <td>Kumauni Bhramin</td>
+      </tr>
+      <tr>
+        <td>Address:</td>
+        <td>Rajpura, Patiala, Punjab</td>
+      </tr>
+
+      <tr>
+        <th colspan="2">Educational and Professional Information</th>
+      </tr>
+      <tr>
+        <td>Education:</td>
+        <td>BSc - Nautical Science</td>
+      </tr>
+      <tr>
+        <td>College:</td>
+        <td>Indian Maritime University</td>
+      </tr>
+      <tr>
+        <td>Working With:</td>
+        <td>Anglo Eastern</td>
+      </tr>
+      <tr>
+        <td>Working As:</td>
+        <td>Navigating Officer in Merchant Navy</td>
+      </tr>
+      <tr>
+        <td>Annual Income:</td>
+        <td>₹30,000,00 - ₹40,000,00</td>
+      </tr>
+
+      <tr>
+        <th colspan="2">Family Information</th>
+      </tr>
+      <tr>
+        <td>Father Occupation:</td>
+        <td>Privately Employed</td>
+      </tr>
+      <tr>
+        <td>Mother Occupation:</td>
+        <td>Homemaker</td>
+      </tr>
+      <tr>
+        <td>Siblings:</td>
+        <td>1 Brother (Unmarried - Software Engineer)</td>
+      </tr>
+
+      <tr>
+        <th colspan="2">Partner Preferences</th>
+      </tr>
+      <tr>
+        <td>Age:</td>
+        <td>21-26 yrs</td>
+      </tr>
+      <tr>
+        <td>Religion (Preferred):</td>
+        <td>Hindu - Kumauni Bhramin</td>
+      </tr>
+      <tr>
+        <td>Education:</td>
+        <td>bachelor/Undergraduate/Master's Degree</td>
+      </tr>
+      <tr>
+        <td>Occupation:</td>
+        <td>Any</td>
+      </tr>
+
+    </table>
+
   </div>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Scroll images a bit when the page loads
+      const imageWrapper = document.getElementById('imageWrapper');
+      imageWrapper.scrollLeft = 100; // Adjust the initial scroll distance as needed
+    });
 
-  <table>
-    <tr>
-      <th colspan="2">Personal Information</th>
-    </tr>
-    <tr>
-      <td>Name:</td>
-      <td>Pranshu Pant</td>
-    </tr>
-    <tr>
-      <td>Date of Birth:</td>
-      <td>29 October, 1997</td>
-    </tr>
-    <tr>
-      <td>Gender:</td>
-      <td>Male</td>
-    </tr>
-    <tr>
-      <td>Height:</td>
-      <td>5'5"</td>
-    </tr>
-    <tr>
-      <td>Religion:</td>
-      <td>Hindu</td>
-    </tr>
-    <tr>
-      <td>Caste:</td>
-      <td>Kumauni Bhramin</td>
-    </tr>
-    <tr>
-      <td>Address:</td>
-      <td>Rajpura, Patiala, Punjab</td>
-    </tr>
+    function scrollImages() {
+      const imageWrapper = document.getElementById('imageWrapper');
+      imageWrapper.scrollLeft += imageWrapper.offsetWidth;
+    }
 
-    <tr>
-      <th colspan="2">Educational and Professional Information</th>
-    </tr>
-    <tr>
-      <td>Education:</td>
-      <td>BSc - Nautical Science</td>
-    </tr>
-    <tr>
-      <td>College:</td>
-      <td>Indian Maritime University</td>
-    </tr>
-    <tr>
-      <td>Working With:</td>
-      <td>Anglo Eastern</td>
-    </tr>
-    <tr>
-      <td>Working As:</td>
-      <td>Navigating Officer in Merchant Navy</td>
-    </tr>
-    <tr>
-      <td>Annual Income:</td>
-      <td>₹30,000,00 - ₹40,000,00</td>
-    </tr>
 
-    <tr>
-      <th colspan="2">Family Information</th>
-    </tr>
-    <tr>
-      <td>Father Occupation:</td>
-      <td>Privately Employed</td>
-    </tr>
-    <tr>
-      <td>Mother Occupation:</td>
-      <td>Homemaker</td>
-    </tr>
-    <tr>
-      <td>Siblings:</td>
-      <td>1 Brother (Unmarried - Software Engineer)</td>
-    </tr>
-
-    <tr>
-      <th colspan="2">Partner Preferences</th>
-    </tr>
-    <tr>
-      <td>Age:</td>
-      <td>21-26 yrs</td>
-    </tr>
-    <tr>
-      <td>Religion (Preferred):</td>
-      <td>Hindu - Kumauni Bhramin</td>
-    </tr>
-    <tr>
-      <td>Education:</td>
-      <td>bachelor/Undergraduate/Master's Degree</td>
-    </tr>
-    <tr>
-      <td>Occupation:</td>
-      <td>Any</td>
-    </tr>
-
-  </table>
-
+  </script>
 
 </body>
 
