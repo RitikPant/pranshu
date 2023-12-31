@@ -1,23 +1,22 @@
-body {
-  margin: 0;
-}
-
 /* Setting padding for body to accommodate the fixed header */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding-top: 20px;
   /* Adjust as needed */
-  background-color: #f4f4f4;
+  background-color: #f1f0f0;
   color: #333;
+  display: flex;
+  justify-content: center;
 }
 
-.main-container {
-  max-width: 600px;
-  margin: 0 auto;
-  overflow-x: hidden;
-  /* Hide horizontal overflow */
-  background-color: #fff;
-  position: relative;
+.wrapper-container {
+    max-width: 600px;
+    margin: 7px;
+    /* margin-bottom: 10px; */
+    overflow-x: hidden;
+    /* Hide horizontal overflow */
+    background-color: #fff;
+    border-radius: 13px;
+    position: relative;
 }
 
 h2 {
@@ -31,20 +30,43 @@ h2 {
 .image-container {
   position: relative;
   overflow: hidden;
+  white-space: nowrap;
+  margin-top: 5px;
+  padding: 10px;
 }
 
 .image-wrapper {
   display: flex;
   width: fit-content;
+  overflow-x: auto;
   transition: transform 0.5s ease; /* Add smooth transition effect */
 }
 
-img {
+.image-container img {
   max-width: 100%;
   height: auto;
+  border-radius: 8px;
+  margin-right: 10px;
 }
 
-.scroll-button {
+.scroll-button-left {
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  transform: translateY(-50%);
+  background-color: rgba(130, 127, 127, 0.5);
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 1; /* Ensure the button stays above the images */
+  display: flex;
+  align-items: center;
+}
+
+.scroll-button-right {
   position: absolute;
   top: 50%;
   right: 3%;
@@ -63,9 +85,14 @@ img {
 
 .scroll-arrow {
   margin-left: 5px;
+  text-align: center;
 }
 
-.scroll-button:hover {
+.scroll-button-left:hover {
+  background-color: rgba(83, 81, 81, 0.5);
+}
+
+.scroll-button-right:hover {
   background-color: rgba(83, 81, 81, 0.5);
 }
 
@@ -85,8 +112,8 @@ td {
 }
 
 th {
-  background-color: #f2f2f2;
-  text-transform: uppercase;
+    background-color: #dddddd;
+    text-transform: uppercase;
 }
 
 tr:nth-child(even) {
@@ -98,29 +125,10 @@ tr:hover {
 }
 
 /* Responsive Styles */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 40px) {
   table {
     box-shadow: none;
     overflow-x: auto;
-  }
-
-  /* Adjusting the width of the table to fit its container */
-  table {
     width: 100%;
   }
-}
-
-/* Image Container Styles */
-.image-container {
-  overflow-x: auto;
-  white-space: nowrap;
-  margin-top: 5px;
-  padding: 10px;
-}
-
-.image-container img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-right: 10px;
 }

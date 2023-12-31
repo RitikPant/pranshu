@@ -11,9 +11,9 @@
 
 <body>
 
-  <div class="main-container">
+  <div class="wrapper-container">
 
-    <h2>Bio Data</h2>
+    <h2>Pranshu's Bio Data</h2>
 
     <div class="image-container">
       <div class="image-wrapper" id="imageWrapper">
@@ -22,7 +22,12 @@
         <img src="assets/pp3.jpg" alt="Image 3">
         <img src="assets/pp4.jpg" alt="Image 4">
       </div>
-      <button class="scroll-button" onclick="scrollImages()">
+
+      <button class="scroll-button-left" onclick="scrollImagesLeft()">
+        <span class="scroll-arrow"><b><<</b></span>
+      </button>
+
+      <button class="scroll-button-right" onclick="scrollImagesRight()">
         <span class="scroll-arrow"><b>>></b></span>
       </button>
 
@@ -57,6 +62,10 @@
         <td>Kumauni Bhramin</td>
       </tr>
       <tr>
+        <td>Gotra:</td>
+        <td>Parasar</td>
+      </tr>
+      <tr>
         <td>Address:</td>
         <td>Rajpura, Patiala, Punjab</td>
       </tr>
@@ -82,7 +91,7 @@
       </tr>
       <tr>
         <td>Annual Income:</td>
-        <td>₹30,000,00 - ₹40,000,00</td>
+        <td>₹25-30 LPA</td>
       </tr>
 
       <tr>
@@ -114,7 +123,7 @@
       </tr>
       <tr>
         <td>Education:</td>
-        <td>bachelor/Undergraduate/Master's Degree</td>
+        <td>Bachelor/Undergraduate/Master's Degree</td>
       </tr>
       <tr>
         <td>Occupation:</td>
@@ -126,17 +135,16 @@
   </div>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      // Scroll images a bit when the page loads
-      const imageWrapper = document.getElementById('imageWrapper');
-      imageWrapper.scrollLeft = 100; // Adjust the initial scroll distance as needed
-    });
 
-    function scrollImages() {
+    function scrollImagesLeft() {
+      const imageWrapper = document.getElementById('imageWrapper');
+      imageWrapper.scrollLeft -= imageWrapper.offsetWidth;
+    }
+
+    function scrollImagesRight() {
       const imageWrapper = document.getElementById('imageWrapper');
       imageWrapper.scrollLeft += imageWrapper.offsetWidth;
     }
-
 
   </script>
 
